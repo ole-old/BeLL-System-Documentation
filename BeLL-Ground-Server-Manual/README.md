@@ -16,7 +16,7 @@ In this manual we will demonstrate how the BeLL Ground Server design can be used
 
 ## Putting the hardware together
 
-![BeLL-Ground-Server.png](BeLL-Ground-Server.png)
+![bell-ground-server-photo.png](bell-ground-server-photo.png)
 
 [The BeLL Ground Server][6] is a 17 Watt Ground Server that supports up to 30 WiFi devices, includes data redundancy, and supports replication with travelling SD Cards and/or the BeLL Ground Server Mobile design.  These things are the backbone of the Sneakernet.
 
