@@ -1,36 +1,22 @@
-# ![][1]
+![Bell System Logo](bell-system-logo.png)
 
-   [1]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1IFtq7FI6MRrLbRcJB6bCeldoBOe0sZ18
+# BeLL Ground Server Manual
 
-# BeLL 
-
-# Ground Server
-
-#  Manual
-
-![][2]
-
-   [2]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1ePDiVAAwrcbcdG0LmvZ4RA6X_AMmjg0do2cGbQ
+![Ground Computing Network Diagram](ground-computing-network-diagram.png)
 
 ## How to Build, Deploy, and Sync Ground Servers into the Sneakernet using Raspberry Pis
 
-![][3]
+![cc-attribution](cc-attribution.png)
 
-   [3]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1RzFTpbAve-xu23XptQ65btNx2kMnE-hIGVXmBQ
-
-[Open Learning Exchange International][4]
-
-   [4]: http://ole.org
+[Open Learning Exchange International](http://ole.org)
 
 # 1. Building Ground Servers
 
-## In this manual we will demonstrate how the BeLL Ground Server design can be used to set up a Sneakernet using the principles of Ground Computing.  Future tutorials will include how to manage the Ground Server Lite and Ground Server Mobile designs.  We’ll start by getting the hardware together and prepare SD cards using an Internet connection. Later parts of this tutorial will not require an Internet connection, only the first download of the required software will require an Internet connection.
+In this manual we will demonstrate how the BeLL Ground Server design can be used to set up a Sneakernet using the principles of Ground Computing.  Future tutorials will include how to manage the Ground Server Lite and Ground Server Mobile designs.  We’ll start by getting the hardware together and prepare SD cards using an Internet connection. Later parts of this tutorial will not require an Internet connection, only the first download of the required software will require an Internet connection.
 
 ## Putting the hardware together
 
-![][5]
-
-   [5]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1zq0Xvcgn_q4G7DygsKXhXNQLm-IQc-Qe
+![BeLL-Ground-Server.png](BeLL-Ground-Server.png)
 
 [The BeLL Ground Server][6] is a 17 Watt Ground Server that supports up to 30 WiFi devices, includes data redundancy, and supports replication with travelling SD Cards and/or the BeLL Ground Server Mobile design.  These things are the backbone of the Sneakernet.
 
@@ -91,18 +77,14 @@ Now that you have CouchDB installed on your Raspberry Pi, it’s time to get som
 
    [15]: https://github.com/open-learning-exchange
 
-![][16]
-
-   [16]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1UFjwTve74lGWjv0ILDskglc0kEoFD997
+![couch-1.png](couch-1.png)
 
 You can access your Pi from an mDNS compatible device at [http://raspberrypi.local][17], CouchDB is on port 5984 by default, and we want to go to the default Futon CouchApp at [http://raspberrypi.local:5984/_utils][18]. Create your first user (I’ve created user “hammock”) and create a database to place some Couch Apps into.
 
    [17]: http://raspberrypi.local
    [18]: http://raspberrypi.local:5984/_utils
 
-![][19]
-
-   [19]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1mo-YedhXV_Lc4YnPMIvNiJY2HymN0lDV
+![couch-2.png](couch-2.png)
 
 Lets get some CouchApps from [http://bell.iriscouch.com][20]. There are [a couple of different ways to get CouchApps for CouchDB][21] installed. [Max Ogden’s extension for Google Chrome ][22]makes it pretty easy.
 
@@ -110,36 +92,28 @@ Lets get some CouchApps from [http://bell.iriscouch.com][20]. There are [a coupl
    [21]: http://couchapp.org/
    [22]: https://chrome.google.com/webstore/detail/couchdb-replicator/clbdmcdmjlpgedncppkbkepbilnhgddh
 
-![][23]
-
-   [23]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=11Lr89Lq66GiCfoljOoRhpnuaFP3VCrhW
+![couch-replicator.png](couch-replicator.png)
 
 But since you might not have that Chrome extension handy, you can also replicate the library database on bell.iriscouch.com to get all of the CouchApps there.
 
-![][24]
-
-   [24]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=13XibhdclXLcBYUi8RNgkhNfCqbG1XHVf
+![bell-library-login.png](bell-library-login.png)
 
 At [http://raspberrypi.local:5984/library/_design/library/app.html][25] you’ll find the BeLL School Library App. 
 
    [25]: http://raspberrypi.local:5984/library/_design/library/app.html
 
-![][26]
+![school-library.png](school-library.png)
 
    [26]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1jGpej1c80-tPLgM2u0KvqTc9W-lmBZVG
 
 Now you can browse some Open Educational Resources by subject and level.  
 
-![][27]
-
-   [27]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=16YTRSkMsB5sBgsEtnak6-OQP44WuiY0V
+![select-a-resource.png](select-a-resource.png)
 
 Clicking “begin” on a resource will open it up into in the appropriate HTML5 App.  Clicking “download” will download the resource to your local machine.  Clicking “feedback” will show you feedback on the resource and allow you add your own feedback.
 
-![][28]
-
-   [28]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=17tCyNa_nqi0a3PFlZDmwZvMa-VyIcWDo
-
+![add-resources.png](add-resources.png)
+se
 When you add resources, make sure to select the correct HTML5 App for the kind of document you are uploading so the “begin” button will work correctly.
 
 ## Cloning SD Cards
@@ -168,9 +142,7 @@ By default, Occidentalis will boot with [Avahi Daemon][29] running with hostname
    [30]: http://raspberrypi.local/
    [31]: http://en.wikipedia.org/wiki/Zero_configuration_networking
 
-![][32]
-
-   [32]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1NHNQG2fZ3PDJumZn7bD3mdKbL59wAtRt
+![set-host-name-1.png](set-host-name-1.png)
 
 From an mDNS compatible device you’ll want to go to raspberrypi.local/config
 
@@ -178,25 +150,19 @@ From an mDNS compatible device you’ll want to go to raspberrypi.local/config
 
    [33]: http://raspberrypi.local/config
 
-![][34]
-
-   [34]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1G2t_0PENme9jhx4Xh8mlOG_5DQoVBhVO
+![set-host-name-2.png](set-host-name-2.png)
 
 Enter a hostname of “bell” and then click Submit Query. If you get an error of “Server Not Found”, don’t worry, the mDNS takes a minute sometimes to propagate so in a few minutes try [http://bell.local][35]/ again. If after a few minutes it still doesn’t work, try again at http://raspberrypi.local/config
 
    [35]: http://bell.local
 
-![][36]
-
-   [36]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1vUcBVTZGbMyDvdVDQ6VCpkyvVcVhXdw4
+![set-host-name-3.png](set-host-name-3.png)
 
 Ta da! Your first Pi is now at [http://bell.local/][37]
 
    [37]: http://bell.local/
 
-![][38]
-
-   [38]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1PeKZgsMvc3o6o-2jHoPc-9qDnPiaoNHm
+![set-host-name-result.png](set-host-name-result.png)
 
 And here is CouchDB on port 5984 and the BeLL Library App at [http://bell.local:5984/library/_design/library/app.html][39]
 
@@ -206,16 +172,14 @@ And here is CouchDB on port 5984 and the BeLL Library App at [http://bell.local:
 
 Now you’ll want to set up your Sync Server using your second Pi so your can sync with other nodes in the Sneakernet.  Plug one of your SD Cards that still has hostname of “raspberrypi” into your second Pi and plug it into the network.  Repeat the process above for changing the hostname except this time you’ll want to rename the hostname to “sync”.
 
-![][40]
-
-   [40]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1bagB6DiSQoy7CrL1L1337R5XppI9BRPK
+![seperate-host-names.png](seperate-host-names.png)
 
 The end result will be a Pi accessible at [http://bell.local/][41] and a Pi accessible at [http://sync.local/][42]
 
    [41]: http://bell.local/
    [42]: http://sync.local/
 
-![][43]
+![replicator-database.png](replicator-database.png)
 
    [43]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1wR4Ral5b0Q0vnT0Y7vc--ui2OZOzcSHs
 
@@ -224,15 +188,11 @@ Go to the Futon CouchApp on each Grond Server at [http://bell.local:5984/_utils]
    [44]: http://bell.local:5984/_utils
    [45]: http://sync.local:5984/_utils
 
-![][46]
-
-   [46]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=16-OzUpXlElTDZElde_FCFKewsUBz-Vyv
+![replicator-pull.png](replicator-pull.png)
 
 Click on “New Document” and then “Add Field” until the fields look like the screenshot. Note that this object editing interface can be a little confusing to use.  Double click to edit things and then press the enter key to confirm them.  For _id, We have chosen a replicator entry naming convention of {database}--{source}-{target}.  The source field is where we’ll be looking for new data while the target field is where we will be placing new data.  The continuous field is what will tell CouchDB to continue, even after we first submit this, to look for changes in the source database to replicate to the target database.  Because the target is local and the source is remote, this is referred to as pull replication. Now we’re going to set up push replication from sync.local to bell.local.  
 
-![][47]
-
-   [47]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1Od5l8zIQ276zUw9oQ8llb3GsLDxTDgE6
+![replicator-push.png](replicator-push.png)
 
 Create another document in the _replicator database and set it up as shown above.  Note the source and target have been reversed from the pull replication example.  This is because we want changes on the sync.local server to be pushed to the database on the bell.local server, this is push replication.
 
@@ -240,18 +200,14 @@ Push replication + Pull replication = Sync!
 
 Let’s do a quick test to see if creating a document in one database will cause it show in the other database.
 
-![][48]
-
-   [48]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1LfL1fu5pO9ubn_g4N9wmBnxP6u8IXxm8
+![replicator-test.png](replicator-test.png)
 
 At [http://bell.local:5984/library/_design/library/app.html#page-resource-form][49] and [http://sync.local:5984/library/_design/library/app.html#page-resource-form][50] I add two files, one on each server.
 
    [49]: http://bell.local:5984/library/_design/library/app.html#page-resource-form
    [50]: http://sync.local:5984/library/_design/library/app.html#page-resource-form
 
-![][51]
-
-   [51]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1_o_9lpbFXqBqJM0mjr8ANtqdVeSwgwUo
+![replicator-test-2.png](replicator-test-2.png)
 
 There they both are on both servers! The sync is working.
 
@@ -261,35 +217,27 @@ If you have an Internet connection, check out my demonstration video: [http://ww
 
    [52]: http://www.youtube.com/watch?v=aQWXaOVAJcQ
 
-![][53]
-
-   [53]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=18zEwNlqJKTiWuiqezMs0VyPU9BKOsT8u
+![bell-node-diagram.png](bell-node-diagram.png)
 
 To sync one BeLL Ground Server to another BeLL Ground Server, all you need to do is move the SD Card with hostname sync from one Node’s Pi to the place where the other Node’s sync SD Card usually sits.  
 
-The BeLL Ground Server is designed to facilitate many to many data replication.  ![][54]
+The BeLL Ground Server is designed to facilitate many to many data replication.  
 
-   [54]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1b3-73Gw0uSZCxE7UjeANiAUlj9VEoZ6G
+![one-to-many-1.png](one-to-many-1.png)
 
 In one to many data replication, all data moves through a parent node before it can move to the children nodes.
 
-![][55]
-
-   [55]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1TTQvGYBgKVRygbwZ_JQcjBs2SYN5vw9M
+![one-to-many-2.png](one-to-many-2.png)
 
 For data to move from node A to node C in a one to many data network, data has to replicate to node B before it can move to node C.
 
-![][56]![][57]
 
-   [56]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1pBQ5RzQlhS-Ch074j5SCYzcEUr4ub4GE
-   [57]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1px0aOcduY0w3ksTGB-92iLPOPaLGEiIk
+![many-to-many-1.png](many-to-many-1.png)
+
+![many-to-many-2.png](many-to-many-2.png)
 
 For data to move from node A to node C in a many to many data network, data can travel directly between node A and C or even hop between neighboring nodes.
 
-![][58]
-
-   [58]: pubimage?id=1zINzqT5tLy8nyaDLvdp5wDYC-GoeqDH0Uny5PsVmNvg&image_id=1zwygCCC3QJOhWtF7xyoYXfiWVFB8EuC3
+![many-to-many-3.png](many-to-many-3.png)
 
 In a many to many data network, data can move in any direction and hop from node to node is the most efficient path or even the most inefficient.  
-
-## 
