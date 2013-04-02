@@ -1,12 +1,14 @@
-![Bell System Logo](bell-system-logo.png)
+
 
 # BeLL Ground Server Manual
+
+![Bell System Logo](bell-system-logo.png)
 
 ![Ground Computing Network Diagram](ground-computing-network-diagram.png)
 
 ## How to Build, Deploy, and Sync Ground Servers into the Sneakernet using Raspberry Pis
 
-![cc-attribution](cc-attribution.png)
+[![cc-attribution](cc-attribution.png)](http://creativecommons.org/licenses/by/3.0/)
 
 [Open Learning Exchange International](http://ole.org)
 
