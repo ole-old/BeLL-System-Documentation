@@ -5,7 +5,7 @@
 	resourceId: <% Resource _id %>,
 	question: "Who is typing?",
 	options: ["Leonard", "RJ", "The Cat"],
-	answer: [2] // The key in the array of options
+	answer: [2, ...] // The key in the array of options, there might be many answers
 }
 ```
 
