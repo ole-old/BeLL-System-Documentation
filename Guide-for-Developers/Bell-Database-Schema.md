@@ -2,7 +2,7 @@
 {
 	kind: "Question",
 	type: "video-book",
-	resourceId: 8796948,
+	resourceId: <% Resource _id %>,
 	question: "Who is typing?",
 	options: ["Leonard", "RJ", "The Cat"],
 	answer: [2] // The key in the array of options
@@ -12,13 +12,15 @@
 ```js
 {
 	kind: "Sync",
-	resourceId: 1234588,
-	createdBy: 84579e8fwhdfwei, // user ID
-	group: 489357yhf98h94f8 // Group ID
-	subject: "English",
-	useContext: "Video book", // or Stories for Week, or Lesson
+	resourceId: <% Resource _id %>,
+	createdBy: <% Member _id %>, 
+	context: {
+	  subject: "English",
+		use: "Video book", // or Stories for Week, or Lesson
+		group: <% Group _id %>
+	}
 	configuration: {
-		questions: [897887982, 87898787, 897897]
+		questions: [<% Question _id %>, <% Question _id %>, ...]
 	}
 }
 ```
@@ -28,25 +30,25 @@
 	kind: "Feedback",
 	rating: 4,
 	comment: "Some comment",
-  resourceId: 394r5935393r3jf34998,
-  timestamp: 122394848,
+  resourceId: <% Resource _id %>,
+  created: <% Unix timestamp %>,
   context: {
   	subject: "English",
   	use: "Stories for the week",
-  	level: "P3"
+  	level: "P3" // This can be derived from the level of the Group
 	}
+	// @todo Do we want to include the Questions used in configuration?
 }
 ```
 
 ```js
 {
 	kind: "Group",
-	id: 8763hf3j09fjn893fhb,
-	facility: “784995985h97g9e8hf98”,
-	owner: [083y5rh9f98h33, 8021887741228], // Teacher's ID
+	facility: <% Facility _id %>,
+	owner: [<% Member _id %>, ...], // Teacher IDs
 	name: "Some group",
 	level: "P3",
-	members: [08hf9n9f8n, 089f9h4f9oh8n, 89f93h98o94hf] // Student IDs
+	members: [<% Member _id %>, ...] // Student IDs
 }
 ```
 
@@ -55,17 +57,17 @@ When moving to other systems, user should create account again by matching the i
 ```js
 {
 	kind: "Member",
-	facility: “87887df878dd87” // Facility ID
+	facility: <% Facility _id %> // Facility ID
 	login: “RJ”, // Unique for facility, not across network
-	role: ["student"],
+	role: ["student", ...],
 	pass: "998",
 	level: "P2",
-	dateRegistered: 109283743,
-	dateOfBirth: 123984739,
-	firstName: "",
-	middleNames: "",
-	lastName: ""
-	_attachments: { Profile images }
+	dateRegistered: <% Unix timestampt %>,
+	dateOfBirth: <% Unix timestampt %>,
+	firstName: "Bob",
+	middleNames: "James",
+	lastName: "Stein"
+	_attachments: { <% profile image files %> }
 }
 ```
 
@@ -75,12 +77,12 @@ This member did action to object at this time in this context
 ```js
 {
 	kind:"Action",
-	memberId: "88789dio89779",
+	memberId: <% Member _id %>,
 	role: "student",
 	action: "view resource",
-	object: "788dfd8977sdd897", 
-	timestamp: 1228797
-	context: "pbell" // pbell, lms
+	object: <% Object _id %>, 
+	timestamp: <% Unix timestamp %>
+	context: "pbell" // pbell, lms, ...
 }
 ```
 
@@ -88,16 +90,16 @@ This member did action to object at this time in this context
 {
   kind: "Resource",
   type: "Video Book", // Readable, Video Tutorial, Audio Lesson
-  audience: ["teacher training", "health", "community education", "formal education"]
+  audience: ["teacher training", "health", "community education", "formal education", ...]
   title: "Good Book",
-  author: "Jane McGonal", 
-  subject: ["English", "Literature", "Math", "Science", "Environmental Studies"],
+  author: "Jane Gong", 
+  subject: ["English", "Literature", "Math", "Science", "Environmental Studies", ...],
   description: "This book is a good read.",
-  uploadTimestamp:1288754887000,
+  uploadTimestamp: <% Unix timestampt %>,
   levels:  ["KG", "P1", ...],
-  approvedBy: ["School", "OLE", "Government"],
-  uploadedBy: "87587idfudik" // Member ID
-  _attachment: {...}
+  approvedBy: ["School", "OLE", "Government", ...],
+  uploadedBy: <% Member _id %>, 
+  _attachment: { <% resource files %> }
 }
 ```
 
@@ -105,12 +107,12 @@ This member did action to object at this time in this context
 {
 	kind: "Facility",
 	type: "Basic School",
-	GPS: ["lat", "lon"],
+	GPS: ["<% lat %>", "<% lon %>"],
 	name: "Katapor School",
 	country: "",
 	region: "",
 	district: "",
-	Area: "Katapor", // 
+	area: "Katapor", // 
 	street: ""
 }
 
