@@ -11,7 +11,7 @@
 
 ```js
 {
-	kind: "Sync",
+	kind: "Assignment",
 	resourceId: <% Resource _id %>,
 	createdBy: <% Member _id %>, 
 	context: {
