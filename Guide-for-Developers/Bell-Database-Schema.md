@@ -113,7 +113,8 @@ This member did action to object at this time in this context
 	region: "",
 	district: "",
 	area: "Katapor", // 
-	street: ""
+	street: "",
+	dateEnrolled:"<% unix timestamp%>"
 }
 
 ```
