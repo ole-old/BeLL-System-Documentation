@@ -108,6 +108,7 @@ This member did action to object at this time in this context
   audience: ["teacher training", "health", "community education", "formal education", ...]
   title: "Good Book",
   author: "Jane Gong", 
+  language: <% Language code %>,
   subject: ["English", "Literature", "Math", "Science", "Environmental Studies", ...],
   description: "This book is a good read.",
   uploadTimestamp: <% Unix timestampt %>,
