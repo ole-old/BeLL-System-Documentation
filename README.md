@@ -6,9 +6,10 @@ If you want to keep track or participate on the bleeding edge of what we are wor
 Your inquiries are quite welcome.
 
 
-## Pages
-- [BeLL Ground Server Manual](BeLL-Ground-Server-Manual)
-- [Designs and notes on a solar power implementation for the BeLL](Solar-Power)
+## Guides
+- [BeLL Ground Server Manual (how to build your own Bell and manage it)](BeLL-Ground-Server-Manual)
+- [Guide for Developers](Guide-for-Developers)
+- [Guide for Managing Energy](Guide-for-Managing-Energy)
 
 ## Fork us!
 This content is licensed under the [Creative Common Attribution 3.0 Ported license](http://creativecommons.org/licenses/by/3.0/) so feel free to remix this.  We would even love if you sent us a pull request!
