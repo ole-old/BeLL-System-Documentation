@@ -26,7 +26,7 @@
   }
 }
 ```
-f
+
 ```js
 {
   kind: "Feedback",
