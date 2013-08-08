@@ -1,3 +1,5 @@
+# Question
+
 ```js
 {
   kind: "Question",
@@ -8,6 +10,8 @@
   answer: [2, ...] // The key in the array of options, there might be many answers
 }
 ```
+
+# Assignment
 
 ```js
 {
@@ -26,7 +30,9 @@
   }
 }
 ```
-f
+
+# Feedback
+
 ```js
 {
   kind: "Feedback",
@@ -43,6 +49,8 @@ f
 }
 ```
 
+# Group
+
 ```js
 {
   kind: "Group",
@@ -53,6 +61,8 @@ f
   members: [<% Member _id %>, ...] // Student IDs
 }
 ```
+
+# Member
 
 When moving to other systems, user should create account again by matching the id and date of birth. This process will change their facility, login and pass will only be unique for a facility, so now with their record modified for the facility, their login and pass will work. That gives a chance to check the uniqueness at the facility.  This has two advantages: convenience because the user may make a typo when typing the id and which might be another record, a nonmatching birth date would be raise a red flag; for security, if they bring their account to a service online, then bots would have to get guess both an id and a birthday combination which would be much harder. 
 
@@ -73,6 +83,7 @@ When moving to other systems, user should create account again by matching the i
 }
 ```
 
+# Action
 
 This member did action to object at this time in this context
 
@@ -87,6 +98,8 @@ This member did action to object at this time in this context
   context: "pbell" // pbell, lms, ...
 }
 ```
+
+# Resource 
 
 ```js
 {
@@ -104,6 +117,8 @@ This member did action to object at this time in this context
   _attachment: { <% resource files %> }
 }
 ```
+
+# Facility
 
 ```js
 {
