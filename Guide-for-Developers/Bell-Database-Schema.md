@@ -75,8 +75,9 @@ When moving to other systems, user should create account again by matching the i
   role: ["student", ...],
   pass: "998",
   levels: ["P2", ...],
-  dateRegistered: <% Unix timestampt %>,
-  dateOfBirth: <% Unix timestampt %>,
+  dateRegistered: <% Unix timestamp %>,
+  dateOfBirth: <% Unix timestamp %>,
+  status: "active", // active, inactive, deceased  
   firstName: "Bob",
   middleNames: "James",
   lastName: "Stein"
