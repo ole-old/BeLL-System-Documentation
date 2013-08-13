@@ -58,7 +58,7 @@
   facility: <% Facility _id %>,
   owner: [<% Member _id %>, ...], // Teacher IDs
   name: "Some group",
-  level: "P3",
+  levels: ["P3", ...],
   members: [<% Member _id %>, ...] // Student IDs
 }
 ```
@@ -74,7 +74,7 @@ When moving to other systems, user should create account again by matching the i
   login: “RJ”, // Unique for facility, not across network
   role: ["student", ...],
   pass: "998",
-  level: "P2",
+  levels: ["P2", ...],
   dateRegistered: <% Unix timestampt %>,
   dateOfBirth: <% Unix timestampt %>,
   firstName: "Bob",
