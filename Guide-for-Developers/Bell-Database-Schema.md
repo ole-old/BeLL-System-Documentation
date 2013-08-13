@@ -23,7 +23,8 @@
   context: {
     subject: "English",
     use: "Video book", // or Stories for Week, or Lesson
-    group: <% Group _id %>
+    groupId: <% Group _id %>,
+    facilityId: <% Facility _id %>
   }
   configuration: {
     questions: [<% Question _id %>, <% Question _id %>, ...]
