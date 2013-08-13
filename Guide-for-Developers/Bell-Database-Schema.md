@@ -137,3 +137,24 @@ This member did action to object at this time in this context
 }
 
 ```
+
+# whoami/config
+```js
+{
+  id: "config",
+  kind: "system",
+  timezone: <% Timezone Abbreviation %>,
+  language: <% Language Code %>,
+  version: <% BeLL LMS Version Number %>,
+  layout: <% Numberic value indicating which text layout is used %>,
+  subjects: <% array of subjects for the Subjects vocabulary at this facility %>,
+  levels: <% array of Levels for the Levels vocabulary at this facility %>
+}
+```
+
+# whoami/facility
+```js
+{
+  facilityId: <% Facility _id %>
+}
+```
