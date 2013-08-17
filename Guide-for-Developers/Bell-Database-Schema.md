@@ -20,6 +20,7 @@
   createdBy: <% Member _id %>, 
   startDate: <% Unix timestamp %>,
   endDate: <% Unix timestamp %>,
+  targetDate: <% Unix timestamp %>
   context: {
     subject: "English",
     use: "Video book", // or Stories for Week, or Lesson
