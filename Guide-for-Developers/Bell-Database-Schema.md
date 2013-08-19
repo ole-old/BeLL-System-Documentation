@@ -81,7 +81,8 @@ When moving to other systems, user should create account again by matching the i
   status: "active", // active, inactive, deceased  
   firstName: "Bob",
   middleNames: "James",
-  lastName: "Stein"
+  lastName: "Stein",
+  phone: "8888888888",
   _attachments: { <% profile image files %> }
 }
 ```
