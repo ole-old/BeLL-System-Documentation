@@ -94,7 +94,7 @@ This member did action to object at this time in this context
 {
   kind:"Action",
   memberId: <% Member _id %>,
-  role: "student",
+  memberRoles: ["student", ...], // Member doing Action may have many roles
   action: "view resource",
   object: <% Object _id %>, 
   timestamp: <% Unix timestamp %>
