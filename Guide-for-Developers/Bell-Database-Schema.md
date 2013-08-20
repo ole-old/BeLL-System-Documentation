@@ -109,14 +109,14 @@ This Action.member did Action.action to Action.objectId at Action.timestamp in A
 ```js
 {
   kind: "Resource",
-  type: "Video Book", // Readable, Video Tutorial, Audio Lesson
-  audience: ["teacher training", "health", "community education", "formal education", ...]
+  type: <% "Video Book" || "Readable" || "Video Tutorial" || "Audio Lesson" %>,
+  audience: [<% "teacher training" || "health" || "community education" || "formal education" %>, ...],
   title: "Good Book",
   author: "Jane Gong", 
   language: <% Language code %>,
   subject: ["English", "Literature", "Math", "Science", "Environmental Studies", ...],
   description: "This book is a good read.",
-  uploadTimestamp: <% Unix timestampt %>,
+  uploadDate: <% Unix timestamp %>,
   levels:  ["KG", "P1", ...],
   approvedBy: ["School", "OLE", "Government", ...],
   uploadedBy: <% Member _id %>, 
