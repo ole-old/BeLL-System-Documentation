@@ -73,7 +73,7 @@ When moving to other systems, user should create account again by matching the i
   kind: "Member",
   facility: <% Facility _id %> // Facility ID
   login: “RJ”, // Unique for facility, not across network
-  role: ["student", ...],
+  role: [<% "student" || "teacher" || "head" || "lead" || "coach" %>,  ... ],
   pass: "998",
   gender: "<% male || female || other %>",
   levels: ["P2", ...],
