@@ -90,7 +90,7 @@ When moving to other systems, user should create account again by matching the i
 
 # Action
 
-This member did action to object at this time in this context
+This Action.member did Action.action to Action.objectId at Action.timestamp in Action.context
 
 ```js
 {
@@ -98,7 +98,7 @@ This member did action to object at this time in this context
   memberId: <% Member _id %>,
   memberRoles: ["student", ...], // Member doing Action may have many roles
   action: "view resource",
-  object: <% Object _id %>, 
+  objectId: <% Object _id %>, 
   timestamp: <% Unix timestamp %>
   context: "pbell" // pbell, lms, ...
 }
