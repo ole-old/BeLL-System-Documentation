@@ -75,6 +75,7 @@ When moving to other systems, user should create account again by matching the i
   login: “RJ”, // Unique for facility, not across network
   role: ["student", ...],
   pass: "998",
+  gender: "<% male || female || other %>",
   levels: ["P2", ...],
   dateRegistered: <% Unix timestamp %>,
   dateOfBirth: <% Unix timestamp %>,
