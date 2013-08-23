@@ -100,8 +100,10 @@ This Action.member did Action.action to Action.objectId at Action.timestamp in A
   action: "view resource",
   objectId: <% Object _id %>, 
   timestamp: <% Unix timestamp %>
-  context: "pbell" // pbell, lms, ...
+  context: "pbell", // pbell, lms, ...
+  facilityId: <% Facility._id %>
 }
+
 ```
 
 # Resource 
