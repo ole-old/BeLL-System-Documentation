@@ -77,6 +77,7 @@ When moving to other systems, user should create account again by matching the i
   pass: "998",
   gender: "<% male || female || other %>",
   levels: ["P2", ...],
+  member: "member@email.org",
   dateRegistered: <% Unix timestamp %>,
   dateOfBirth: <% Unix timestamp %>,
   status: "active", // active, inactive, deceased  
