@@ -81,6 +81,7 @@ When moving to other systems, user should create account again by matching the i
   dateRegistered: <% Unix timestamp %>,
   dateOfBirth: <% Unix timestamp %>,
   status: "active", // active, inactive, deceased  
+  languages: ["en", "el", ...],
   firstLanguage: "en",
   firstName: "Bob",
   middleNames: "James",
