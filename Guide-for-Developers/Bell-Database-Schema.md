@@ -41,6 +41,7 @@
   rating: 4,
   comment: "Some comment",
   resourceId: <% Resource _id %>,
+  memberId: <% Member _id %>,
   created: <% Unix timestamp %>,
   context: {
     subject: "English",
