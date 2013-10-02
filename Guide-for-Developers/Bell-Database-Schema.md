@@ -41,6 +41,7 @@
   rating: 4,
   comment: "Some comment",
   resourceId: <% Resource _id %>,
+  memberId: <% Member _id %>,
   created: <% Unix timestamp %>,
   context: {
     subject: "English",
@@ -73,22 +74,27 @@ When moving to other systems, user should create account again by matching the i
   kind: "Member",
   facility: <% Facility _id %> // Facility ID
   login: “RJ”, // Unique for facility, not across network
-  role: ["student", ...],
+  role: [<% "student" || "teacher" || "head" || "lead" || "coach" %>,  ... ],
   pass: "998",
+  gender: "<% male || female || other %>",
   levels: ["P2", ...],
+  email: "member@email.org",
   dateRegistered: <% Unix timestamp %>,
   dateOfBirth: <% Unix timestamp %>,
   status: "active", // active, inactive, deceased  
+  languages: ["en", "el", ...],
+  firstLanguage: "en",
   firstName: "Bob",
   middleNames: "James",
-  lastName: "Stein"
+  lastName: "Stein",
+  phone: "8888888888",
   _attachments: { <% profile image files %> }
 }
 ```
 
 # Action
 
-This member did action to object at this time in this context
+This Action.member did Action.action to Action.objectId at Action.timestamp in Action.context
 
 ```js
 {
@@ -96,10 +102,12 @@ This member did action to object at this time in this context
   memberId: <% Member _id %>,
   memberRoles: ["student", ...], // Member doing Action may have many roles
   action: "view resource",
-  object: <% Object _id %>, 
+  objectId: <% Object _id %>, 
   timestamp: <% Unix timestamp %>
-  context: "pbell" // pbell, lms, ...
+  context: "pbell", // pbell, lms, ...
+  facilityId: <% Facility._id %>
 }
+
 ```
 
 # Resource 
@@ -107,14 +115,14 @@ This member did action to object at this time in this context
 ```js
 {
   kind: "Resource",
-  type: "Video Book", // Readable, Video Tutorial, Audio Lesson
-  audience: ["teacher training", "health", "community education", "formal education", ...]
+  type: <% "Video Book" || "Readable" || "Video Tutorial" || "Audio Lesson" %>,
+  audience: [<% "teacher training" || "health" || "community education" || "formal education" %>, ...],
   title: "Good Book",
   author: "Jane Gong", 
   language: <% Language code %>,
   subject: ["English", "Literature", "Math", "Science", "Environmental Studies", ...],
   description: "This book is a good read.",
-  uploadTimestamp: <% Unix timestampt %>,
+  uploadDate: <% Unix timestamp %>,
   levels:  ["KG", "P1", ...],
   approvedBy: ["School", "OLE", "Government", ...],
   uploadedBy: <% Member _id %>, 
