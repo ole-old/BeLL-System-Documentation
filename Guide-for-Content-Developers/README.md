@@ -9,7 +9,7 @@ Here are the three questions to ask when understanding if your content is a good
 3. Can you give us each piece of content in a separate folder and have each piece of content playable when opened from those folders in a Web Browser?
 
 
-# Getting my video content into the BeLL System
+# Getting video content into the BeLL System
 
 Because the BeLL Apps is built on Open Web Standards that work in browsers, we suggest you format your videos in the WEBM format.
 If your videos are not already in the WEBM format, you can convert them using the free and Open Source software, [Miro Video Converter](http://www.mirovideoconverter.com/).
